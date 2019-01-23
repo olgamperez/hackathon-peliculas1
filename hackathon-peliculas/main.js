@@ -26,10 +26,8 @@ function printCards () {
             document.getElementById("root").innerHTML +=  `
             <div class="col s12 m3">
             <div class="card">
-            <div class="imgIcon">
             <img class="responsive-img"  src="${data.Search[0].Poster}">
             <a href="#modal" class="btn-floating btn-large waves-effect waves-light red btn modal-trigger"><i class="material-icons"> add </i></a>
-            </div>
             <h4 class="flow-text">"${data.Search[0].Title}"</h4>
             <p class="flow-text">${data.Search[0].Year}</p>
 
