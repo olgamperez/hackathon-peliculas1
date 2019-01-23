@@ -4,8 +4,12 @@
       <meta charset="utf-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <title>titulo</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <!--Import Google Icon Font-->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
    </head>
    <body>
         <nav id="nav-bar">
@@ -25,35 +29,42 @@
                       </li>
                       <li><input type="text" id="search-input" placeholder="Buscar.."></li>
                    </ul>
-                   <ul class="sidenav" id="menu-responsive">
-                      <li><a id="back-to-initial-responsive" href="#">Inicio</a>
-                      </li>
-                      <li><a href="#">Eventos</a>
-                      </li>
-                      <li><a id="help-btn-responsive" href="#">Ayuda</a>
-                      </li>
-                      <li><a id="premium-btn-responsive" href="#">Premiun</a>
-                      </li>
-                      <li><a id="contact-btn-responsive" href="#">Contacto</a>
-                      </li>
-                      <li> <a id="search-btn-responsive" href="#"><input type="text" id="search-input" placeholder="Buscar.."></a></li>
-                   </ul>
                 </div>
              </nav>
-      <!--<div class="container">
-         <div class="row">
-            <div class="col s12 m6 ">
-               <div class="input-field">
-                  <input id="search-input" type="search" required>
-                  <label class="label-icon" for="search"><i class="material-icons"></i></label>
-                  <i class="material-icons">search</i>
-               </div>
-            </div>
-         </div>
-        </div>-->
-        <div id="root"></div>
+<!--Select-->
+<div id="container1" class="container">
+        <div class="row">
+           <div id="select-films" class="col s12 m4">
+              <select id="select-type-films">
+                 <option value="">Elige tu genero</option>
+                 <option value="28">Acción</option>
+                 <option value="12">Aventura</option>
+                 <option value="16">Animación</option>
+                 <option value="35">Comedia</option>
+                 <option value="80">Crimen</option>
+                 <option value="99">Documentales</option>
+                 <option value="18">Drama</option>
+                 <option value="10751">Familia</option>
+                 <option value="14">Fantasia</option>
+                 <option value="36">Historia</option>
+                 <option value="27">Horror</option>
+                 <option value="10402">Música</option>
+                 <option value="9648">Misterio</option>
+                 <option value="1079">Romance</option>
+                 <option value="878">Ciencia Ficción</option>
+                 <option value="10770">P. televisión</option>
+                 <option value="53">Suspenso</option>
+                 <option value="10752">Guerra</option>
+                 <option value="37">Occidentales</option>
+              </select>
+           </div>
+     </div>
+  </div>
+  <div id="root"></div>
       
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       <script src="data.js"></script>
       <script src="main.js"></script>
    </body>
