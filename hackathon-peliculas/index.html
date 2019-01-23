@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>titulo</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <link rel="stylesheet" href="style.css" >
+   </head>
+   <body>
+        <nav id="nav-bar">
+                <div class="container nav-wrapper">
+                   <a href="#" class="brand-logo">PeliShare</a>
+                   <a href="#" data-target="menu-responsive" class="sidenav-trigger">
+                   <i class="material-icons">menu</i>
+                   </a>
+                   <ul class="right hide-on-med-and-down">
+                      <li><a id="back-to-initial" href="#">Inicio</a>
+                      </li>
+                      <li><a href="#" target="_blank">Programación</a>
+                      </li>
+                      <li><a href="#" id="help-btn">Ayuda</a>
+                      </li>
+                      <li><a href="#" id="premium-btn">Premium</a>
+                      </li>
+                      <li><input type="text" id="search-input" placeholder="Buscar.."></li>
+                   </ul>
+                   <ul class="sidenav" id="menu-responsive">
+                      <li><a id="back-to-initial-responsive" href="#">Inicio</a>
+                      </li>
+                      <li><a href="#">Eventos</a>
+                      </li>
+                      <li><a id="help-btn-responsive" href="#">Ayuda</a>
+                      </li>
+                      <li><a id="premium-btn-responsive" href="#">Premiun</a>
+                      </li>
+                      <li><a id="contact-btn-responsive" href="#">Contacto</a>
+                      </li>
+                      <li> <a id="search-btn-responsive" href="#"><input type="text" id="search-input" placeholder="Buscar.."></a></li>
+                   </ul>
+                </div>
+             </nav>
+      <!--<div class="container">
+         <div class="row">
+            <div class="col s12 m6 ">
+               <div class="input-field">
+                  <input id="search-input" type="search" required>
+                  <label class="label-icon" for="search"><i class="material-icons"></i></label>
+                  <i class="material-icons">search</i>
+               </div>
+            </div>
+         </div>
+        </div>-->
+
+        <div class="container">
+           <div class="row">
+        <div id="root"></div>
+      </div>
+   </div>
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script src="data.js"></script>
+      <script src="main.js"></script>
+      <script>
+       document.addEventListener('DOMContentLoaded', function() {
+          var elems = document.querySelectorAll('.modal');
+          var instances = M.Modal.init(elems, options);
+         }); 
+      </script>
+   </body>
+   </body>
+</html>
