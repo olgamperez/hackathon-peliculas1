@@ -26,9 +26,12 @@ function printCards () {
             document.getElementById("root").innerHTML +=  `
             <div class="col s12 m3">
             <div class="card">
+            <div class="imgIcon">
             <img class="responsive-img"  src="${data.Search[0].Poster}">
+            <a href="#modal" class="btn-floating btn-large waves-effect waves-light red btn modal-trigger"><i class="material-icons"> add </i></a>
+            </div>
             <h4 class="flow-text">"${data.Search[0].Title}"</h4>
-            <span class="flow-text">${data.Search[0].Year}</span>
+            <p class="flow-text">${data.Search[0].Year}</p>
 
             </div>
           </div>`
@@ -55,7 +58,7 @@ document.getElementById("search-input").addEventListener("keydown",(evento)=>{
      for (let i = 0; i <dataDocumentJson.length; i++){
       document.getElementById('root').innerHTML += `
       <div class="container section">
-            <div class="card horizontal">
+            <div class="card horizontal" > <a class="waves-effect waves-light btn modal-trigger" href="#modal">
             <div class="card-image">
             <img src="${data.Search[i].Poster}">
             </div>
@@ -64,14 +67,7 @@ document.getElementById("search-input").addEventListener("keydown",(evento)=>{
             <h4 class="header">"${data.Search[i].Title}"</h4>
             <span class="card-title ">${data.Search[i].Year}</span>
             </div>
-                <div class="card-action">
-                  <a href="#">This is a link</a>
-                </div>
-
-            <div class="card-action">
-            <a href="#">This is a link</a>
-            </div>
-
+            </a>
             </div>
         </div>`
     }

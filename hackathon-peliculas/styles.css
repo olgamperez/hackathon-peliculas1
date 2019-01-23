@@ -1,6 +1,9 @@
 .card{
     height: 530px;
 }
+.header{
+    font-size: 1%;
+}
 
 textarea.materialize-textarea {
     background-color: #f44336;
