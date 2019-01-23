@@ -4,11 +4,6 @@ document.addEventListener("DOMContentLoaded", function(){
     window.M.AutoInit();
    });
 
-
-   
-
-
-
 //Imprimiendo tarjetas para la pag principal según el año 
 function printCards () {
 
@@ -30,13 +25,9 @@ function printCards () {
             <a href="#modal" class="btn-floating btn-large waves-effect waves-light red btn modal-trigger"><i class="material-icons"> add </i></a>
             <h4 class="flow-text">"${data.Search[0].Title}"</h4>
             <p class="flow-text">${data.Search[0].Year}</p>
-
             </div>
           </div>`
            })
- 
- 
- 
         }
       });
     }
@@ -55,17 +46,16 @@ document.getElementById("search-input").addEventListener("keydown",(evento)=>{
      document.getElementById('root').innerHTML = "";
      for (let i = 0; i <dataDocumentJson.length; i++){
       document.getElementById('root').innerHTML += `
-      <div class="container section">
-            <div class="card horizontal" > <a class="waves-effect waves-light btn modal-trigger" href="#modal">
-            <div class="card-image">
+      <div class="col s12 m3">
+            <div class="card">
+            <div class="card-image small">
             <img src="${data.Search[i].Poster}">
             </div>
             <div class="card-stacked">
             <div class="card-content">
-            <h4 class="header">"${data.Search[i].Title}"</h4>
+            <p class="header">"${data.Search[i].Title}"</p>
             <span class="card-title ">${data.Search[i].Year}</span>
             </div>
-            </a>
             </div>
         </div>`
     }
