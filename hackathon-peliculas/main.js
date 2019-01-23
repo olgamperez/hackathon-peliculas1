@@ -26,13 +26,13 @@ document.addEventListener("DOMContentLoaded", function(){
                document.getElementById("root").innerHTML +=  `
                <div class="col s12 m3">
                <div class="card">
-               <div class="card-image">
+               <div class="card-image small">
                <img class="responsive-img" src="${data.Poster}">
                </div>
                <div class="card-stacked">
                <div class="card-content">
                <span class="card-title ">${data.Year}</span>
-               <h6 class="flow-text">"${data.Title}"</h6>
+               <p class="header">"${data.Title}"</p>
                </div>
                </div>
                </div>
@@ -59,20 +59,17 @@ document.addEventListener("DOMContentLoaded", function(){
         //console.log(idFilms)
       for (let i = 0; i <idFilms.length; i++){
             document.getElementById("root").innerHTML +=  `
-            <div class="container section">
-            <div class="card horizontal">
-            <div class="card-image">
+            <div class="col s12 m3">
+            <div class="card">
+            <div class="card-image small">
             <img src="https://image.tmdb.org/t/p/w500/${idFilms[i].poster_path}">
             </div>
             <div class="card-stacked">
             <div class="card-content">
             <span class="card-title ">Lanzamiento: ${idFilms[i].release_date}</span>
-            <h4 class="header">"${idFilms[i].title}"</h4>
+            <p class="header">"${idFilms[i].title}"</p>
             </div>
-            <div class="card-action">
-            <a href="#">This is a link</a>
-                </div>
-              </div>
+            </div>
             </div>
           </div>`
            }
@@ -94,19 +91,16 @@ document.getElementById("search-input").addEventListener("keydown",(evento)=>{
      document.getElementById('root').innerHTML = "";
      for (let i = 0; i <dataDocumentJson.length; i++){
       document.getElementById('root').innerHTML += `
-      <div class="container section">
-            <div class="card horizontal">
-            <div class="card-image">
+      <div class="col s12 m3">
+            <div class="card">
+            <div class="card-image small">
             <img src="${data.Search[i].Poster}">
             </div>
             <div class="card-stacked">
             <div class="card-content">
-            <h4 class="header">"${data.Search[i].Title}"</h4>
+            <p class="header">"${data.Search[i].Title}"</p>
             <span class="card-title ">${data.Search[i].Year}</span>
             </div>
-                <div class="card-action">
-                  <a href="#">This is a link</a>
-                </div>
               </div>
             </div>
           </div>`
