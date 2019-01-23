@@ -16,23 +16,25 @@ function printCards () {
  
       for (let i = 0; i <imageFilms.length; i++){
         let titleFilms= imageFilms[i].title
-         fetch ("http://www.omdbapi.com/?s="+titleFilms+"&page=1&y=2019&apikey=8f0dd609")
+         fetch ("http://www.omdbapi.com/?t="+titleFilms+"&y=2019&apikey=8f0dd609")
            .then (data=>data.json())
            .then (data =>{                               
             console.log(data)
             document.getElementById("root").innerHTML +=  `
-            <div class="col s6 m3">
+            <div class="container section">
             <div class="card horizontal">
             <div class="card-image">
-            <img src="${data.Search[0].Poster}">
+            <img src="${data.Poster}">
             </div>
             <div class="card-stacked">
             <div class="card-content">
-            <h4 class="header">"${data.Search[0].Title}"</h4>
-            <span class="card-title ">${data.Search[0].Year}</span>
-                </div>
-                <div class="card-action">
-                  <a href="#">This is a link</a>
+            <span class="card-title ">${data.Year}</span>
+            <h4 class="header">"${data.Title}"</h4>
+            <h5>"${data.Plot}".</h5>
+            <p>Actors: "${data.Actors}".</p>
+            </div>
+            <div class="card-action">
+            <a href="#">This is a link</a>
                 </div>
               </div>
             </div>
@@ -59,7 +61,7 @@ document.getElementById("search-input").addEventListener("keydown",(evento)=>{
      document.getElementById('root').innerHTML = "";
      for (let i = 0; i <dataDocumentJson.length; i++){
       document.getElementById('root').innerHTML += `
-      <div class="col s6 m3">
+      <div class="container section">
             <div class="card horizontal">
             <div class="card-image">
             <img src="${data.Search[i].Poster}">
@@ -68,7 +70,7 @@ document.getElementById("search-input").addEventListener("keydown",(evento)=>{
             <div class="card-content">
             <h4 class="header">"${data.Search[i].Title}"</h4>
             <span class="card-title ">${data.Search[i].Year}</span>
-                </div>
+            </div>
                 <div class="card-action">
                   <a href="#">This is a link</a>
                 </div>
