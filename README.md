@@ -204,8 +204,13 @@ Al tener los Definition of Done, o requerimientos de la plataforma, se trabajó 
 ## **Desarrollo de Interfaz UI**
 -----------------------------
 
-
-
-
 ## **Mobile First**
-![](p6.png)
+![](mobile.png)
+
+## **Versión escritorio**
+
+
+> Prototipo interactivo desarrollado en [Figma](https://www.figma.com/file/TDjybkMBDH19fLqT3IDvENih/Prototipo-PeliShare?node-id=0%3A1).
+
+
+
