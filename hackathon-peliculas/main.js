@@ -24,29 +24,26 @@ document.addEventListener("DOMContentLoaded", function(){
               }                  
                //console.log(data)
                document.getElementById("root").innerHTML +=  `
-               <div class="container section">
-               <div class="card horizontal">
+               <div class="col s12 m3">
+               <div class="card">
                <div class="card-image">
-               <img src="${data.Poster}">
+               <img class="responsive-img" src="${data.Poster}">
                </div>
                <div class="card-stacked">
                <div class="card-content">
                <span class="card-title ">${data.Year}</span>
-               <h4 class="header">"${data.Title}"</h4>
-               <h5>"${data.Plot}".</h5>
-               <p>Actors: "${data.Actors}".</p>
+               <h6 class="flow-text">"${data.Title}"</h6>
                </div>
-               <div class="card-action">
-               <a href="#">This is a link</a>
-                   </div>
-                 </div>
                </div>
-             </div>`
+               </div>
+               </div>`
               })
-           }
-         });
+            }
+            // <h5>"${data.Plot}".</h5>
+            //<p>Actors: "${data.Actors}".</p>
+          });
        }
-       window.onload = printCards
+      
 
 //Funcion del select (filtrar)
     document.getElementById("select-type-films").addEventListener("change", (e)=> {
@@ -82,7 +79,9 @@ document.addEventListener("DOMContentLoaded", function(){
     })
 })
 
-//visualización de la data para buscador
+
+
+////visualización de la data para buscador
 document.getElementById("search-input").addEventListener("keydown",(evento)=>{
    if(evento.keyCode === 13){
        //console.log("hola")
@@ -111,10 +110,9 @@ document.getElementById("search-input").addEventListener("keydown",(evento)=>{
               </div>
             </div>
           </div>`
+
     }
   })
   };
 });
- 
-
- 
+window.onload = printCards
