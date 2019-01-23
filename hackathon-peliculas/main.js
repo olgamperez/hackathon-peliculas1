@@ -1,4 +1,10 @@
 //let apikey = "8f0dd609"
+//Initialization for Components Materialize
+document.addEventListener("DOMContentLoaded", function(){
+    window.M.AutoInit();
+   });
+
+
 
 //Imprimiendo tarjetas para la pag principal según el año 
 function printCards () {
@@ -10,11 +16,27 @@ function printCards () {
  
       for (let i = 0; i <imageFilms.length; i++){
         let titleFilms= imageFilms[i].title
-         fetch ("http://www.omdbapi.com/?s="+titleFilms+"&page=1&apikey=8f0dd609")
+         fetch ("http://www.omdbapi.com/?s="+titleFilms+"&page=1&y=2019&apikey=8f0dd609")
            .then (data=>data.json())
-           .then (data =>{
+           .then (data =>{                               
             console.log(data)
-            document.getElementById("root").innerHTML +=  `<img src=${data.Search[0].Poster}>`
+            document.getElementById("root").innerHTML +=  `
+            <div class="col s6 m3">
+            <div class="card horizontal">
+            <div class="card-image">
+            <img src="${data.Search[0].Poster}">
+            </div>
+            <div class="card-stacked">
+            <div class="card-content">
+            <h4 class="header">"${data.Search[0].Title}"</h4>
+            <span class="card-title ">${data.Search[0].Year}</span>
+                </div>
+                <div class="card-action">
+                  <a href="#">This is a link</a>
+                </div>
+              </div>
+            </div>
+          </div>`
            })
  
  
@@ -37,10 +59,28 @@ document.getElementById("search-input").addEventListener("keydown",(evento)=>{
      document.getElementById('root').innerHTML = "";
      for (let i = 0; i <dataDocumentJson.length; i++){
       document.getElementById('root').innerHTML += `
-      <img src=${dataDocumentJson[i].Poster}>`
+      <div class="col s6 m3">
+            <div class="card horizontal">
+            <div class="card-image">
+            <img src="${data.Search[i].Poster}">
+            </div>
+            <div class="card-stacked">
+            <div class="card-content">
+            <h4 class="header">"${data.Search[i].Title}"</h4>
+            <span class="card-title ">${data.Search[i].Year}</span>
+                </div>
+                <div class="card-action">
+                  <a href="#">This is a link</a>
+                </div>
+              </div>
+            </div>
+          </div>`
     }
   })
   };
 });
  
  window.onload = printCards
+
+
+//<img src=${data.Search[0].Poster}>
