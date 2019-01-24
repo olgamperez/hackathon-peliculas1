@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>titulo</title>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <!--Import Google Icon Font-->
+     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <link rel="stylesheet" href="styles.css" />
+
+   </head>
+   <body>
+        <nav id="nav-bar">
+                <div class="container nav-wrapper">
+                   <a href="#" class="brand-logo orange-text text-darken-3">PeliShare</a>
+                   <a href="#" data-target="menu-responsive" class="sidenav-trigger">
+                   <i class="material-icons">menu</i>
+                   </a>
+                   <ul class="right hide-on-med-and-down">
+                      <li><a id="initial-btn" href="#">Inicio</a>
+                      </li>
+                      <li><a href="#" id="program-btn">Programación</a>
+                      </li>
+                      <li><a href="#" id="help-btn">Ayuda</a>
+                      </li>
+                      <li><a href="#" id="premium-btn">Premium</a>
+                      </li>
+                      <li><input type="text" id="search-input" placeholder="Buscar.."></li>
+                   </ul>
+                </div>
+             </nav>
+         <div class="container">
+
+            <div id="first-page">
+            <h1 id="title-page-initial">¿No sabes que ver?</h1>
+            <p id="paragraph-initial">No te preocupes, nosotros podemos recomendarte algo interesante; solo respóndenos las siguientes preguntas:</p>
+               <hr>
+              
+               <p>Con cuál de los siguientes estados te idéntificas el día de hoy:</p>
+               <a class="waves-effect waves-light btn-large btn1">Depresión</a>
+               <a class="waves-effect waves-light btn-large btn1">Estrés</a>
+               <a class="waves-effect waves-light btn-large btn1">Feliz</a>
+               <a class="waves-effect waves-light btn-large btn1">Inseguridad</a>
+               <a class="waves-effect waves-light btn-large btn1">Enamorad@</a>
+               <a class="waves-effect waves-light btn-large btn1">Molest@</a>
+               <a class="waves-effect waves-light btn-large btn1">Inspirad@</a>
+               <a class="waves-effect waves-light btn-large btn1">Tranquil@</a>
+               
+               <p>¿Con cuánto tiempo dispones aproximadamete?</p>
+
+
+              
+               <div id="select-btn" class="col s12 m4">
+               
+                  <a id="28" class="waves-effect waves-light btn-large btn2">Amigos</a>
+                  <a id="10751" class="waves-effect waves-light btn-large btn2">Familia</a>
+                  <a id="10749" class="waves-effect waves-light btn-large btn2">Pareja</a>
+                  <a id="27" class="waves-effect waves-light btn-large btn2">Conquista</a>
+                  <a id="10770" class="waves-effect waves-light btn-large btn2">Solitario/a</a>
+               </div>
+            </div>
+            
+            <div id="root1" class="row"></div>
+         </div>
+         
+<!--2ºPantalla-->
+<div id="second-page">
+
+<!--Select-->
+<div id="container2" class="container">
+      <div class="row">
+         <div id="select-films" class="col s12 m4">
+            <select id="select-type-films">
+               <option value="">Elige tu genero</option>
+               <option value="28">Acción</option>
+               <option value="12">Aventura</option>
+               <option value="16">Animación</option>
+               <option value="35">Comedia</option>
+               <option value="80">Crimen</option>
+               <option value="18">Drama</option>
+               <option value="10751">Familia</option>
+               <option value="14">Fantasia</option>
+               <option value="36">Historia</option>
+               <option value="27">Horror</option>
+               <option value="10402">Música</option>
+               <option value="9648">Misterio</option>
+               <option value="10749">Romance</option>
+               <option value="878">Ciencia Ficción</option>
+               <option value="10770">P. televisión</option>
+               <option value="53">Suspenso</option>
+               <option value="37">Occidentales</option>
+            </select>
+         </div>
+   </div>
+</div>
+<div class="container">
+ <div class="row">
+<div id="root"></div>
+</div>
+</div>
+</div>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <script src="data.js"></script>
+      <script src="main.js"></script>
+      <!--<script>
+         document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.modal');
+            var instances = M.Modal.init(elems, options);
+           }); 
+        </script>-->
+
+   </body>
+   </body>
+</html>
